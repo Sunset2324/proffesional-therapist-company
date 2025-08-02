@@ -6,13 +6,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    host: true,
-    cors: true,
-    headers: {
-      'Content-Type': 'text/javascript; charset=utf-8'
-    }
+    host: '0.0.0.0'
   },
-  esbuild: {
-    target: 'esnext'
+  build: {
+    assetsInlineLimit: 0
   }
 });
